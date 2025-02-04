@@ -17,31 +17,6 @@ import csv
 #  Des instructions détaillées sont données plus bas
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # INSTRUCTIONS DÉTAILLÉES
 #Ouvrez en lecture le fichier Ex6 Competences.csv
 #avec l'encodage et le delimiter requis
@@ -49,3 +24,9 @@ import csv
 #Faites une boucle pour passer à travers chacune des lignes du fichier
 #Si l'exigence est  'Exigé' imprimez cette ligne
 
+with open("Ex6 Competences.csv", "r", encoding="utf-8") as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter="/")
+    print(csv_reader[0:2])
+    for line in csv_reader:
+        if line[2] in "Exigé":
+            print(line)

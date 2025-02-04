@@ -6,17 +6,19 @@ import csv
 
 # Dans le fichier "Ex5 Stages.csv", vous avez une liste de stages en programmation et en TI
 # Vous voulez extraire les stages de TI et les mettres dans un nouveau fichier spécifique aux stages de TI
-with open("Ex5 Stages TI.csv", "w",encoding = "utf-8") as csv_filew:
-    csv_writer = csv.writer(csv_filew, delimiter="\n")
-    csv_writer.writerow(["Compagnie", "Ville", "Voie de sortie"])
+
     
 
 with open("Ex5 Stages.csv", "r") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter="|")
     next(csv_reader)
-    for line in csv_reader:
-        if line[3] in "TI":
-            csv_writer.writerow(line)
+    with open("Ex5 Stages TI.csv", "w",encoding = "utf-8") as csv_filew:
+        csv_writer = csv.writer(csv_filew, delimiter=";")
+        csv_writer.writerow(["Compagnie","Ville","Voie de sortie"])
+        next(csv_writer)
+        for line in csv_reader:
+            if line[2] in "TI":
+                csv_writer.writerow(line)
  
 
 # Regardez le contenu du fichier "Ex5 Stages.csv"
