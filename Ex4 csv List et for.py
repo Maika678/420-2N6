@@ -11,9 +11,10 @@ import csv
 # Faites un petit script qui ouvre le fichier csv en mode lecture et qui affiche uniquement les offres ou la demande de Diplôme a la valeur 'Dec' ou 'Non déterminé'
 os.chdir("C:\\Users\\1776430\\OneDrive - Cégep Édouard-Montpetit\\H2025\\Prog 2\\Cours 3\\R03 Exercices Depart\\csvs")
 with open("Ex4 Emplois Reseautique.csv", "r") as csv_file:
-    csv_reader = csv.reader(csv_file)
+    csv_reader = csv.reader(csv_file, delimiter= ";")
+    next(csv_reader)
     for line in csv_reader:
-        if line in "Dec":
+        if line[4] in "Dec" or "Non déterminé":
             print(line)
 
 
@@ -31,19 +32,6 @@ with open("Ex4 Emplois Reseautique.csv", "r") as csv_file:
 
 
 ficher_a_lire = os.path.join("csvs","Ex4 Emplois Reseautique.csv" )
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
