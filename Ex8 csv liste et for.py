@@ -3,7 +3,7 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 
 # Importez csv
 
-
+import csv
  
 
 # Vous utiliserez encore le fichier "Ex7 Lan Party.csv"
@@ -17,26 +17,6 @@ os.chdir(os.path.dirname(__file__))   # Elles permettent de se positionner dans 
 
 
 #         Si besoin, des instructions détaillées sont données plus bas
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
