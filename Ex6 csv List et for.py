@@ -26,7 +26,7 @@ import csv
 
 with open("Ex6 Competences.csv", "r", encoding="utf-8") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter="/")
-    print(csv_reader[0:2])
+    #print(csv_reader[0:2])
     for line in csv_reader:
         if line[2] in "Exigé":
             print(line)
